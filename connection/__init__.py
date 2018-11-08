@@ -1,11 +1,12 @@
 #!/usr/bin/env python
-from public import public
+import public
 import requests
 
 TIMEOUT = 5
 URL = 'http://www.google.com/'
 
-@public
+
+@public.add
 def check(timeout=None):
     if not timeout:
         timeout = TIMEOUT
@@ -15,4 +16,3 @@ def check(timeout=None):
     except requests.ConnectionError:
         return False
     return False
-
