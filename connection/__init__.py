@@ -1,12 +1,12 @@
-#!/usr/bin/env python
-import public
+__all__ = ['check']
+
+
 import requests
 
 TIMEOUT = 5
 URL = 'http://www.google.com/'
 
 
-@public.add
 def check(timeout=None):
     """return True if connection is ok, else False"""
     if not timeout:
