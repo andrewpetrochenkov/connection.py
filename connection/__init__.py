@@ -7,12 +7,14 @@ TIMEOUT = 5
 URL = 'http://www.google.com/'
 
 
-def check(timeout=None):
+def check(timeout=None, url=None):
     """return True if connection is ok, else False"""
     if not timeout:
         timeout = TIMEOUT
+    if not url:
+        url = URL
     try:
-        requests.get(URL, timeout=timeout)
+        requests.get(url=URL, timeout=timeout)
         return True
     except requests.ConnectionError:
         return False

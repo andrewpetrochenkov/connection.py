@@ -24,6 +24,11 @@ timeout
 >>> connection.check(timeout=2)
 ```
 
+url
+```python
+>>> connection.check(url='https://github.com/')
+```
+
 <p align="center">
     <a href="https://readme42.com/">readme42.com</a>
 </p>
