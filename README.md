@@ -1,18 +1,12 @@
-<!--
-https://readme42.com
--->
-
-
-[![](https://img.shields.io/pypi/v/connection.svg?maxAge=3600)](https://pypi.org/project/connection/)
-[![](https://img.shields.io/badge/License-Unlicense-blue.svg?longCache=True)](https://unlicense.org/)
-[![](https://github.com/andrewp-as-is/connection.py/workflows/tests42/badge.svg)](https://github.com/andrewp-as-is/connection.py/actions)
+[![](https://img.shields.io/badge/released-2021.1.5-green.svg?longCache=True)](https://pypi.org/project/connection/)
+[![](https://img.shields.io/badge/license-Unlicense-blue.svg?longCache=True)](https://unlicense.org/)
 
 ### Installation
 ```bash
-$ [sudo] pip install connection
+$ pip install connection
 ```
 
-#### Examples
+### Examples
 ```python
 >>> import connection
 >>> connection.check()
@@ -32,3 +26,4 @@ url
 <p align="center">
     <a href="https://readme42.com/">readme42.com</a>
 </p>
+

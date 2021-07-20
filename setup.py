@@ -1,8 +1,12 @@
-import setuptools
+from setuptools import setup
 
-setuptools.setup(
+setup(
     name='connection',
-    version='2021.1.5',
-    install_requires=open('requirements.txt').read().splitlines(),
-    packages=setuptools.find_packages()
+    version='2021.7.20',
+    install_requires=[
+        'requests'
+    ],
+    packages=[
+        'connection'
+    ]
 )

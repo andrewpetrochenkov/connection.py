@@ -10,7 +10,7 @@ def check(url: str = 'https://www.example.com', timeout: Union[int, float] = 5) 
     """Check for an internet connection. Return True if connection works.
 The default URL is https://www.example.com, and the default timeout value is 5."""
     try:
-        requests.get(url=URL, timeout=timeout)
+        requests.head(url=URL, timeout=timeout)
         return True
     except (requests.ConnectionError, requests.exceptions.ReadTimeout):
         return False
