@@ -1,23 +1,16 @@
 __all__ = ['check']
 
 
+from typing import Union
+
 import requests
 
-TIMEOUT = 5
-URL = 'http://www.google.com/'
 
-
-def check(timeout=None, url=None):
-    """return True if connection is ok, else False"""
-    if not timeout:
-        timeout = TIMEOUT
-    if not url:
-        url = URL
+def check(url: str = 'https://www.example.com', timeout: Union[int, float] = 5) -> bool:
+    """Check for an internet connection. Return True if connection works.
+The default URL is https://www.example.com, and the default timeout value is 5."""
     try:
         requests.get(url=URL, timeout=timeout)
         return True
-    except requests.ConnectionError:
+    except (requests.ConnectionError, requests.exceptions.ReadTimeout):
         return False
-    except requests.exceptions.ReadTimeout:
-        False
-    return False
